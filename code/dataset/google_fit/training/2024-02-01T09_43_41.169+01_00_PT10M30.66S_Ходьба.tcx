@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrainingCenterDatabase
+    xmlns="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2"
+    xmlns:ns2="http://www.garmin.com/xmlschemas/UserProfile/v2"
+    xmlns:ns3="http://www.garmin.com/xmlschemas/ActivityExtension/v2"
+    xmlns:ns4="http://www.garmin.com/xmlschemas/ProfileExtension/v1"
+    xmlns:ns5="http://www.garmin.com/xmlschemas/ActivityGoals/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2 http://www.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd">
+    <Activities>
+        <Activity Sport="Walking">
+            <Id>2024-02-01T08:43:41.169Z</Id>
+            <Lap StartTime="2024-02-01T08:43:41.169Z">
+                <Track>
+                    <Trackpoint>
+                        <DistanceMeters>0.0</DistanceMeters>
+                        <Time>2024-02-01T08:43:41.169Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>62.51636799255278</DistanceMeters>
+                        <Time>2024-02-01T08:44:21.265Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>162.70289821520572</DistanceMeters>
+                        <Time>2024-02-01T08:45:21.545Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>258.3474521265913</DistanceMeters>
+                        <Time>2024-02-01T08:46:21.545Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>356.76889256727577</DistanceMeters>
+                        <Time>2024-02-01T08:47:22.545Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>451.809289848671</DistanceMeters>
+                        <Time>2024-02-01T08:48:23.345Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>544.0949205456698</DistanceMeters>
+                        <Time>2024-02-01T08:49:24.745Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>639.135317827065</DistanceMeters>
+                        <Time>2024-02-01T08:50:25.545Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>712.9211520013919</DistanceMeters>
+                        <Time>2024-02-01T08:51:26.665Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>793.8175916965794</DistanceMeters>
+                        <Time>2024-02-01T08:52:26.585Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>851.8086521396895</DistanceMeters>
+                        <Time>2024-02-01T08:53:27.905Z</Time>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <DistanceMeters>881.7753279584755</DistanceMeters>
+                        <Time>2024-02-01T08:54:11.829Z</Time>
+                    </Trackpoint>
+                </Track>
+                <DistanceMeters>881.7753279584755</DistanceMeters>
+                <TotalTimeSeconds>630.66</TotalTimeSeconds>
+                <Calories>45.26737333333333</Calories>
+                <Intensity>Active</Intensity>
+                <TriggerMethod>Manual</TriggerMethod>
+            </Lap>
+        </Activity>
+    </Activities>
+    <Author xsi:type="Application_t">
+        <Name>Google Fit</Name>
+        <Build>
+            <Version>
+                <VersionMajor>0</VersionMajor>
+                <VersionMinor>0</VersionMinor>
+                <BuildMajor>0</BuildMajor>
+                <BuildMinor>0</BuildMinor>
+            </Version>
+        </Build>
+        <LangID>en</LangID>
+        <PartNumber>000-00000-00</PartNumber>
+    </Author>
+</TrainingCenterDatabase>

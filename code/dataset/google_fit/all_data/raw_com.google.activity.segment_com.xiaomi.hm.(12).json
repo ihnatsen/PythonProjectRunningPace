@@ -1,0 +1,9 @@
+{
+    "Data Source": "raw:com.google.activity.segment:com.xiaomi.hm.health:GoogleFitSyncHelper- steps segments6",
+    "Data Points": [
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1713985080000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1713983880000000000,"modifiedTimeMillis":1714376652009,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714153680000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714153440000000000,"modifiedTimeMillis":1714376652984,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714329660000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714329360000000000,"modifiedTimeMillis":1714970456368,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714830000000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714829760000000000,"modifiedTimeMillis":1715016011429,"rawTimestampNanos":0}
+    ]
+}

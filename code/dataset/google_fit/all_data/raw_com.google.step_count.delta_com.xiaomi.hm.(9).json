@@ -1,0 +1,15 @@
+{
+    "Data Source": "raw:com.google.step_count.delta:com.xiaomi.hm.health:GoogleFitSyncHelper- steps2",
+    "Data Points": [
+        {"fitValue":[{"value":{"intVal":673}}],"originDataSourceId":"","endTimeNanos":1713451560000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1713451260000000000,"modifiedTimeMillis":1713463577179,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":417}}],"originDataSourceId":"","endTimeNanos":1713504180000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1713503580000000000,"modifiedTimeMillis":1714376649833,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":180}}],"originDataSourceId":"","endTimeNanos":1713721440000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1713721140000000000,"modifiedTimeMillis":1714376650985,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":709}}],"originDataSourceId":"","endTimeNanos":1713888240000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1713887820000000000,"modifiedTimeMillis":1714376650985,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":1029}}],"originDataSourceId":"","endTimeNanos":1713968700000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1713968100000000000,"modifiedTimeMillis":1714376651994,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":986}}],"originDataSourceId":"","endTimeNanos":1714111920000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1714111500000000000,"modifiedTimeMillis":1714376651994,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":126}}],"originDataSourceId":"","endTimeNanos":1714247760000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1714246800000000000,"modifiedTimeMillis":1714376653020,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":6810}}],"originDataSourceId":"","endTimeNanos":1714760520000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1714758060000000000,"modifiedTimeMillis":1714970457589,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":378}}],"originDataSourceId":"","endTimeNanos":1714825560000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1714824900000000000,"modifiedTimeMillis":1715016011431,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":396}}],"originDataSourceId":"","endTimeNanos":1714927860000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1714927080000000000,"modifiedTimeMillis":1715016012585,"rawTimestampNanos":0}
+    ]
+}

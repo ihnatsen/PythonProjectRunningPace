@@ -1,0 +1,6 @@
+{
+    "Data Source": "raw:com.google.step_count.delta:com.xiaomi.hm.health:GoogleFitSyncHelper- steps15",
+    "Data Points": [
+        {"fitValue":[{"value":{"intVal":150}}],"originDataSourceId":"","endTimeNanos":1713550320000000000,"dataTypeName":"com.google.step_count.delta","startTimeNanos":1713549900000000000,"modifiedTimeMillis":1714376650982,"rawTimestampNanos":0}
+    ]
+}

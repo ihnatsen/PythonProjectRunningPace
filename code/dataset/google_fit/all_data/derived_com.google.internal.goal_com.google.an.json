@@ -1,0 +1,7 @@
+{
+    "Data Source": "derived:com.google.internal.goal:com.google.android.apps.fitness:com_google_heart_minutes.cumulative.day...sample",
+    "Data Points": [
+        {"fitValue":[{"blob":{"internalGoal":{"endTimeNanos":9223372036854000000,"dataTypeName":"com.google.heart_minutes","cumulativeObjective":{"objective":{"fieldName":"intensity","value":{"fpVal":20},"operator":"GTE"}},"recurInterval":{"unit":"DAY","count":1},"startTimeNanos":1700163052882000000}}}],"originDataSourceId":"","endTimeNanos":1700163052882000000,"dataTypeName":"com.google.internal.goal","startTimeNanos":1700163052882000000,"modifiedTimeMillis":1700163580460,"rawTimestampNanos":0},
+        {"fitValue":[{"blob":{"internalGoal":{"endTimeNanos":9223372036854000000,"dataTypeName":"com.google.heart_minutes","cumulativeObjective":{"objective":{"fieldName":"intensity","value":{"fpVal":5},"operator":"GTE"}},"recurInterval":{"unit":"DAY","count":1},"startTimeNanos":1700163335643000000}}}],"originDataSourceId":"","endTimeNanos":1700163335643000000,"dataTypeName":"com.google.internal.goal","startTimeNanos":1700163335643000000,"modifiedTimeMillis":1700163580460,"rawTimestampNanos":0}
+    ]
+}

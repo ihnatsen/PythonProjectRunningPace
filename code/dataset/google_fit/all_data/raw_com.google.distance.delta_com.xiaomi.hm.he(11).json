@@ -1,0 +1,10 @@
+{
+    "Data Source": "raw:com.google.distance.delta:com.xiaomi.hm.health:GoogleFitSyncHelper- distance4",
+    "Data Points": [
+        {"fitValue":[{"value":{"fpVal":7742}}],"originDataSourceId":"","endTimeNanos":1713979560000000000,"dataTypeName":"com.google.distance.delta","startTimeNanos":1713976800000000000,"modifiedTimeMillis":1714376651998,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":226}}],"originDataSourceId":"","endTimeNanos":1714134360000000000,"dataTypeName":"com.google.distance.delta","startTimeNanos":1714134120000000000,"modifiedTimeMillis":1714376652983,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":261}}],"originDataSourceId":"","endTimeNanos":1714326000000000000,"dataTypeName":"com.google.distance.delta","startTimeNanos":1714325580000000000,"modifiedTimeMillis":1714970456367,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":466}}],"originDataSourceId":"","endTimeNanos":1714827720000000000,"dataTypeName":"com.google.distance.delta","startTimeNanos":1714827180000000000,"modifiedTimeMillis":1715016011457,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":819}}],"originDataSourceId":"","endTimeNanos":1714931280000000000,"dataTypeName":"com.google.distance.delta","startTimeNanos":1714931040000000000,"modifiedTimeMillis":1715016012502,"rawTimestampNanos":0}
+    ]
+}

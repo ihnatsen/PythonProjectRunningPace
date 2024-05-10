@@ -1,0 +1,30 @@
+{
+  "fitnessActivity": "other",
+  "startTime": "2024-05-01T17:11:00Z",
+  "endTime": "2024-05-01T17:44:00Z",
+  "duration": "1980s",
+  "segment": [{
+    "fitnessActivity": "other",
+    "startTime": "2024-05-01T17:11:00Z",
+    "endTime": "2024-05-01T17:44:00Z"
+  }],
+  "aggregate": [{
+    "metricName": "com.google.heart_minutes.summary",
+    "floatValue": 2.0
+  }, {
+    "metricName": "com.google.calories.expended",
+    "floatValue": 77.68188008396103
+  }, {
+    "metricName": "com.google.step_count.delta",
+    "intValue": 1189
+  }, {
+    "metricName": "com.google.distance.delta",
+    "floatValue": 866.0
+  }, {
+    "metricName": "com.google.speed.summary",
+    "floatValue": 1.1955500033312856
+  }, {
+    "metricName": "com.google.active_minutes",
+    "intValue": 33
+  }]
+}

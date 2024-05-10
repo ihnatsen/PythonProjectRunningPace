@@ -1,0 +1,15 @@
+{
+  "fitnessActivity": "walking",
+  "startTime": "2024-04-19T04:12:00Z",
+  "endTime": "2024-04-19T04:19:00Z",
+  "duration": "420s",
+  "segment": [{
+    "fitnessActivity": "walking",
+    "startTime": "2024-04-19T04:12:00Z",
+    "endTime": "2024-04-19T04:19:00Z"
+  }],
+  "aggregate": [{
+    "metricName": "com.google.calories.expended",
+    "floatValue": 30.146666666666665
+  }]
+}

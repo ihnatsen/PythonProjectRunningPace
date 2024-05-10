@@ -1,0 +1,16 @@
+{
+  "fitnessActivity": "other",
+  "startTime": "2024-04-19T12:12:00Z",
+  "endTime": "2024-04-19T12:25:00Z",
+  "duration": "0s",
+  "aggregate": [{
+    "metricName": "com.google.calories.expended",
+    "floatValue": 14.293228843808174
+  }, {
+    "metricName": "com.google.distance.delta",
+    "floatValue": 308.0
+  }, {
+    "metricName": "com.google.speed.summary",
+    "floatValue": 0.39487179487179486
+  }]
+}

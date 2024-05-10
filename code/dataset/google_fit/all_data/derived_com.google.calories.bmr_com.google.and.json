@@ -1,0 +1,7 @@
+{
+    "Data Source": "derived:com.google.calories.bmr:com.google.android.gms:merged",
+    "Data Points": [
+        {"fitValue":[{"value":{"fpVal":1583.2499642372131}}],"originDataSourceId":"derived:com.google.calories.bmr:com.google.android.gms:from_height&weight","endTimeNanos":1700162990103000000,"dataTypeName":"com.google.calories.bmr","startTimeNanos":1700162990103000000,"modifiedTimeMillis":1700163058009,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":1583.2499642372131}}],"originDataSourceId":"derived:com.google.calories.bmr:com.google.android.gms:from_height&weight","endTimeNanos":1700162995516000000,"dataTypeName":"com.google.calories.bmr","startTimeNanos":1700162995516000000,"modifiedTimeMillis":1700163058009,"rawTimestampNanos":0}
+    ]
+}

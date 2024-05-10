@@ -1,0 +1,9 @@
+{
+    "Data Source": "raw:com.google.calories.expended:com.xiaomi.hm.health:GoogleFitSyncHelper- calories7",
+    "Data Points": [
+        {"fitValue":[{"value":{"fpVal":5}}],"originDataSourceId":"","endTimeNanos":1713986040000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1713985620000000000,"modifiedTimeMillis":1714376652013,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":213}}],"originDataSourceId":"","endTimeNanos":1714155120000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714153740000000000,"modifiedTimeMillis":1714376653001,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":4}}],"originDataSourceId":"","endTimeNanos":1714330560000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714330260000000000,"modifiedTimeMillis":1714970456367,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":6}}],"originDataSourceId":"","endTimeNanos":1714831320000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714831080000000000,"modifiedTimeMillis":1715016012503,"rawTimestampNanos":0}
+    ]
+}

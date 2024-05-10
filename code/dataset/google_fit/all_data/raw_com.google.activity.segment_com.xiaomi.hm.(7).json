@@ -1,0 +1,6 @@
+{
+    "Data Source": "raw:com.google.activity.segment:com.xiaomi.hm.health:GoogleFitSyncHelper- steps segments15",
+    "Data Points": [
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1713550320000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1713549900000000000,"modifiedTimeMillis":1714376650982,"rawTimestampNanos":0}
+    ]
+}

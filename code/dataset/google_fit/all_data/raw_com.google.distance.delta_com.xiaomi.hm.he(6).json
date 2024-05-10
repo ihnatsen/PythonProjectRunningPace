@@ -1,0 +1,6 @@
+{
+    "Data Source": "raw:com.google.distance.delta:com.xiaomi.hm.health:GoogleFitSyncHelper- distance13",
+    "Data Points": [
+        {"fitValue":[{"value":{"fpVal":368}}],"originDataSourceId":"","endTimeNanos":1714837560000000000,"dataTypeName":"com.google.distance.delta","startTimeNanos":1714836900000000000,"modifiedTimeMillis":1715016012584,"rawTimestampNanos":0}
+    ]
+}

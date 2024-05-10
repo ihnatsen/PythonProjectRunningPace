@@ -1,0 +1,16 @@
+{
+    "Data Source": "raw:com.google.activity.segment:com.xiaomi.hm.health:GoogleFitSyncHelper- steps segments1",
+    "Data Points": [
+        {"fitValue":[{"value":{"intVal":8}}],"originDataSourceId":"","endTimeNanos":1713451200000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1713448140000000000,"modifiedTimeMillis":1713463577247,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":8}}],"originDataSourceId":"","endTimeNanos":1713721080000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1713719040000000000,"modifiedTimeMillis":1714376650984,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":8}}],"originDataSourceId":"","endTimeNanos":1713887760000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1713885000000000000,"modifiedTimeMillis":1714376650984,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1713967680000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1713967020000000000,"modifiedTimeMillis":1714376651983,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714108800000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714108380000000000,"modifiedTimeMillis":1714376651983,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714240020000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714239780000000000,"modifiedTimeMillis":1714376653003,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714320420000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714319940000000000,"modifiedTimeMillis":1714970456347,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":108}}],"originDataSourceId":"","endTimeNanos":1714585440000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714583460000000000,"modifiedTimeMillis":1714970456347,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714758000000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714757580000000000,"modifiedTimeMillis":1714970457575,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714813080000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714812600000000000,"modifiedTimeMillis":1715016011442,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"intVal":7}}],"originDataSourceId":"","endTimeNanos":1714926720000000000,"dataTypeName":"com.google.activity.segment","startTimeNanos":1714926300000000000,"modifiedTimeMillis":1715016012584,"rawTimestampNanos":0}
+    ]
+}

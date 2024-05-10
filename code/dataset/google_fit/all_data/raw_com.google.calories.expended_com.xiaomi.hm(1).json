@@ -1,0 +1,16 @@
+{
+    "Data Source": "raw:com.google.calories.expended:com.xiaomi.hm.health:GoogleFitSyncHelper- calories1",
+    "Data Points": [
+        {"fitValue":[{"value":{"fpVal":494}}],"originDataSourceId":"","endTimeNanos":1713451200000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1713448140000000000,"modifiedTimeMillis":1713463577247,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":334}}],"originDataSourceId":"","endTimeNanos":1713721080000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1713719040000000000,"modifiedTimeMillis":1714376650985,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":507}}],"originDataSourceId":"","endTimeNanos":1713887760000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1713885000000000000,"modifiedTimeMillis":1714376650985,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":10}}],"originDataSourceId":"","endTimeNanos":1713967680000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1713967020000000000,"modifiedTimeMillis":1714376651994,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":8}}],"originDataSourceId":"","endTimeNanos":1714108800000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714108380000000000,"modifiedTimeMillis":1714376651994,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":2}}],"originDataSourceId":"","endTimeNanos":1714240020000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714239780000000000,"modifiedTimeMillis":1714376653015,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":5}}],"originDataSourceId":"","endTimeNanos":1714320420000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714319940000000000,"modifiedTimeMillis":1714970456364,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":31}}],"originDataSourceId":"","endTimeNanos":1714585440000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714583460000000000,"modifiedTimeMillis":1714970456364,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":15}}],"originDataSourceId":"","endTimeNanos":1714758000000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714757580000000000,"modifiedTimeMillis":1714970457588,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":4}}],"originDataSourceId":"","endTimeNanos":1714813080000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714812600000000000,"modifiedTimeMillis":1715016011442,"rawTimestampNanos":0},
+        {"fitValue":[{"value":{"fpVal":2}}],"originDataSourceId":"","endTimeNanos":1714926720000000000,"dataTypeName":"com.google.calories.expended","startTimeNanos":1714926300000000000,"modifiedTimeMillis":1715016012608,"rawTimestampNanos":0}
+    ]
+}
