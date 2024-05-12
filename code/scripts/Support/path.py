@@ -9,7 +9,7 @@ def get_path_df(names_directory: list | str, name_df: str):
     match names_directory:
         case str():
             return os.path.join(__root_project, 'dataset', names_directory, name_df)
-        case list() | type():
+        case list():
             return os.path.join(__root_project, 'dataset', *names_directory, name_df)
         case _:
             raise ValueError('Path is not valid')

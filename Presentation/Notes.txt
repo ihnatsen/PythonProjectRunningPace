@@ -1,1 +1,4 @@
 ECMWF - https://www.visualcrossing.com/weather-history/Warszaw/metric/last15days(dataset temperature)
+
+The first date is 2023-04-16 09:05:08+02:00.
+The last date is 2024-05-07 15:25:57+02:00.
