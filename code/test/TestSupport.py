@@ -1,7 +1,7 @@
 import unittest
-from scripts.Support.path import get_path_df
-from scripts.Support.data_transformation import Value, json_string_to_dict
-from scripts.Support.format_txt import paint
+from scripts.Support.path import *
+from scripts.Support.data_transformation import *
+from scripts.Support.format_txt import *
 
 
 class TestSupp(unittest.TestCase):
@@ -20,16 +20,20 @@ class TestSupp(unittest.TestCase):
                                      '2023-11-17T13_32_42.345+01_00_PT11M17.127S_Ходьба.tcx'),
                          path_to_google_date)
 
-    def test_value_clss(self):
-        # value for test
-        value_for_checking = [{'key_one': 11, 'key_two': 12, 'key_three': 13, 'key_four': 14},
-                              {'key_one': 21, 'key_two': 22, 'key_three': 23, 'key_four': 24},
-                              {'key_one': 31, 'key_two': 32, 'key_three': 33, 'key_four': 34}]
-        # create instance for check
-        value = Value(value_for_checking)
+        # case:
+        path_to_dataset = r'D:\PythonProjectRunningPace\code\dataset'
+        self.assertEqual(get_path_dataset(), path_to_dataset)
 
-        #
-        self.assertEqual(value['key_one'], [11, 21, 31])
+        # case: new file with some directories
+        path = r'D:\PythonProjectRunningPace\code\dataset\google_fit\all_data\new_data.txt'
+        directories = ['dataset', 'google_fit', 'all_data']
+        self.assertEqual(get_path_to_new_file(directories, 'new_data.txt'), path)
+
+        # case: new file in modul
+        path = r'D:\PythonProjectRunningPace\code\output\new_data.txt'
+        self.assertEqual(get_path_to_new_file('output', 'new_data.txt'), path)
+
+
 
     def test_json_string_to_dict(self):
         # value for test
@@ -43,12 +47,12 @@ class TestSupp(unittest.TestCase):
 
     def test_format_txt(self):
 
-        # rgb red - 130, 0, 0
+        # rgb red - 204, 50, 50
         # case: The second parameter is name color, which in module "format_txt":
-        self.assertEqual(f'\033[38;2;{153};{0};{0}mPython\u001b[0m',
+        self.assertEqual(f'\033[38;2;{204};{50};{50}mPython\u001b[0m',
                          paint('Python', 'red'))
 
-        # rgb maroon = 130, 0, 0
+        # rgb maroon = 128, 0, 0
         # case: The second parameter is rgb,
         self.assertEqual(f'\033[38;2;{128};{0};{0}mPython\u001b[0m',
                          paint('Python', [128, 0, 0]))
@@ -57,7 +61,7 @@ class TestSupp(unittest.TestCase):
         self.assertEqual(paint('Python', 'maroon'), 'Python')
 
         # case: checking that foo painting only her txt
-        self.assertEqual(f'\033[38;2;{255};{0};{0}mPython\u001b[0m' + ' Java',
+        self.assertEqual(f'\033[38;2;{204};{50};{50}mPython\u001b[0m' + ' Java',
                          paint('Python', 'red') + ' Java')
 
 

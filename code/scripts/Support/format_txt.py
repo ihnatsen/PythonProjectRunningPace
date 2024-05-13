@@ -1,4 +1,4 @@
-COLOURS_DICT = {
+__COLOURS_DICT = {
     "red": (204, 50, 50),
     "green": (0, 102, 0),
     "blue": (0, 65, 204),
@@ -7,18 +7,22 @@ COLOURS_DICT = {
     "purple": (128, 0, 128),
     "cyan": (0, 255, 255),
     "pink": (255, 0, 153)}
-NONE_ANSI = "\u001b[0m"
+__NONE_ANSI = "\u001b[0m"
 
 
 def paint(string, rgb: list | str) -> str:
+    string = str(string)
     colour = None
     match rgb:
         case str() as name:
-            if COLOURS_DICT.get(name):
-                colour = '\033[38;2;{};{};{}m'.format(*COLOURS_DICT[name])
+            if __COLOURS_DICT.get(name):
+                colour = '\033[38;2;{};{};{}m'.format(*__COLOURS_DICT[name])
             else:
                 return string
         case list():
             colour = '\033[38;2;{};{};{}m'.format(*rgb)
 
-    return f'{colour}{string}{NONE_ANSI}'
+    return f'{colour}{string}{__NONE_ANSI}'
+
+
+__all__ = ['paint']
