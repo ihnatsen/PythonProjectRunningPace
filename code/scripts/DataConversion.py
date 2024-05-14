@@ -1,7 +1,8 @@
 import pandas as pd
-from Support.data_transformation import json_string_to_dict
+from Support.data_transformation import *
 from Support.format_txt import paint
 from Support.path import *
+
 
 df = pd.read_csv(get_path_df('mi_fitness', 'all_data.csv'))
 date_format = "%m/%d/%Y, %H:%M:%S"
@@ -77,6 +78,14 @@ def filter_three(data: pd.DataFrame) -> pd.DataFrame:
     return filter_data
 
 
+def filter_four(data: pd.DataFrame) -> pd.DataFrame:
+    print(f'The number of records that contain a avg_pace more than {paint(6, 'red')} min/km '
+          f'is {paint(len(data)-len(data[data['avg_pace'] < 6.5]), 'red')}')
+    print(data[data['avg_pace'] < 6.5])
+    print()
+    return data[data['avg_pace'] <= 6.5]
+
+
 def main():
     avg_pace: pd.Series
     # filter data
@@ -90,8 +99,13 @@ def main():
     avg_pace = minutes/kilometres
     data['avg_pace'] = avg_pace.round(2)
 
+    # filter avg data
+    data = filter_four(data)
+
     # write a ready data to directory dataset
-    data.to_csv(get_path_to_new_file('dataset', 'training.csv'), index=False)
+    # data.to_csv(get_path_to_new_file('dataset', 'training.csv'), index=False)
+    print(f'The first date is {unix_to_datetime(data['start_time'].min())}')
+    print(f'The last date is {unix_to_datetime(data['start_time'].max())}')
 
 
 if __name__ == '__main__':

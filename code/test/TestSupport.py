@@ -1,4 +1,5 @@
 import unittest
+
 from scripts.Support.path import *
 from scripts.Support.data_transformation import *
 from scripts.Support.format_txt import *
@@ -20,10 +21,6 @@ class TestSupp(unittest.TestCase):
                                      '2023-11-17T13_32_42.345+01_00_PT11M17.127S_Ходьба.tcx'),
                          path_to_google_date)
 
-        # case:
-        path_to_dataset = r'D:\PythonProjectRunningPace\code\dataset'
-        self.assertEqual(get_path_dataset(), path_to_dataset)
-
         # case: new file with some directories
         path = r'D:\PythonProjectRunningPace\code\dataset\google_fit\all_data\new_data.txt'
         directories = ['dataset', 'google_fit', 'all_data']
@@ -32,8 +29,6 @@ class TestSupp(unittest.TestCase):
         # case: new file in modul
         path = r'D:\PythonProjectRunningPace\code\output\new_data.txt'
         self.assertEqual(get_path_to_new_file('output', 'new_data.txt'), path)
-
-
 
     def test_json_string_to_dict(self):
         # value for test

@@ -15,10 +15,6 @@ def get_path_df(names_directory: list | str, name_df: str):
             raise ValueError('Path is not valid')
 
 
-def get_path_dataset():
-    return os.path.join(__root_project, 'dataset')
-
-
 def get_path_to_new_file(path: list[str] | str, name_file: str):
     match path:
         case str():
@@ -27,4 +23,4 @@ def get_path_to_new_file(path: list[str] | str, name_file: str):
             return os.path.join(__root_project, *path, name_file)
 
 
-__all__ = ['get_path_df', 'get_path_dataset', 'get_path_to_new_file']
+__all__ = ['get_path_df', 'get_path_to_new_file']
