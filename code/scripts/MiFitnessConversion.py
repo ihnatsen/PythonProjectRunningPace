@@ -8,6 +8,7 @@ df = pd.read_csv(get_path_df('mi_fitness', 'all_data.csv'))
 date_format = "%m/%d/%Y, %H:%M:%S"
 
 
+
 def value_to_dict(df):
     # head[:168] : ['time', 'timezone', 'version', 'start_time', 'end_time', 'proto_type', 'sport_type', 'duration',
     # 'distance', 'calories', 'max_pace', 'min_pace', 'avg_pace', 'max_speed', 'steps', 'max_cadence', 'avg_cadence',
@@ -44,6 +45,9 @@ def filter_one(df) -> pd.DataFrame:
     value = value_to_dict(df)
 
     date_time = [time['start_time'] for time in value]
+
+    # It's command search for pair records, which have difference less than hour (3600sec)
+    # and return pair indexes.
     data_for_formatting = filter(lambda pair_date: pair_date[1] - pair_date[0] < 3600 and pair_date[1] != pair_date[0],
                                  zip(date_time, date_time[1:]))
 
@@ -86,8 +90,20 @@ def filter_four(data: pd.DataFrame) -> pd.DataFrame:
     return data[data['avg_pace'] <= 6.5]
 
 
+def split_datatime(df: pd.DataFrame) -> pd.DataFrame:
+    df['start_time'] = pd.to_datetime(df['start_time'], unit='s', utc=True).dt.tz_convert('Europe/Warsaw')
+    df['end_time'] = pd.to_datetime(df['end_time'], unit='s', utc=True).dt.tz_convert('Europe/Warsaw')
+
+    df['data_training'] = pd.to_datetime(df['start_time'], unit='s').dt.date
+    df['start_time'] = pd.to_datetime(df['start_time'], unit='s').dt.time
+    df['end_time'] = pd.to_datetime(df['end_time'], unit='s').dt.time
+
+    return df
+
+
 def main():
     avg_pace: pd.Series
+
     # filter data
     data = filter_one(df)
     data = filter_two(data)
@@ -102,11 +118,15 @@ def main():
     # filter avg data
     data = filter_four(data)
 
+    # split end and start time to date and hours
+    data = split_datatime(data)
+
     # write a ready data to directory dataset
     # data.to_csv(get_path_to_new_file('dataset', 'training.csv'), index=False)
-    print(f'The first date is {unix_to_datetime(data['start_time'].min())}')
-    print(f'The last date is {unix_to_datetime(data['start_time'].max())}')
+    # print(f'The first date is {unix_to_datetime(data['start_time'].min())}')
+    # print(f'The last date is {unix_to_datetime(data['start_time'].max())}')
 
+    print(data['distance'].sum())
 
 if __name__ == '__main__':
     main()
