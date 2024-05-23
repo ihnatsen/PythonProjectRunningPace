@@ -126,7 +126,6 @@ def main():
     # print(f'The first date is {unix_to_datetime(data['start_time'].min())}')
     # print(f'The last date is {unix_to_datetime(data['start_time'].max())}')
 
-    print(data['distance'].sum())
 
 if __name__ == '__main__':
     main()
