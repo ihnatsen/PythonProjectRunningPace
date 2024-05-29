@@ -8,7 +8,6 @@ df = pd.read_csv(get_path_df('mi_fitness', 'all_data.csv'))
 date_format = "%m/%d/%Y, %H:%M:%S"
 
 
-
 def value_to_dict(df):
     # head[:168] : ['time', 'timezone', 'version', 'start_time', 'end_time', 'proto_type', 'sport_type', 'duration',
     # 'distance', 'calories', 'max_pace', 'min_pace', 'avg_pace', 'max_speed', 'steps', 'max_cadence', 'avg_cadence',

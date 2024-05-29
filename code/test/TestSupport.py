@@ -3,6 +3,7 @@ import unittest
 from scripts.Support.path import *
 from scripts.Support.data_transformation import *
 from scripts.Support.format_txt import *
+from scripts.Support.combinatorics import *
 
 
 class TestSupp(unittest.TestCase):
@@ -58,6 +59,16 @@ class TestSupp(unittest.TestCase):
         # case: checking that foo painting only her txt
         self.assertEqual(f'\033[38;2;{204};{50};{50}mPython\u001b[0m' + ' Java',
                          paint('Python', 'red') + ' Java')
+
+    def test_get_all_permutations(self):
+        self.assertEqual(get_all_combinations([]), [])
+        self.assertEqual(get_all_combinations(['1']), [('1',)])
+        self.assertEqual(get_all_combinations(['1', '2']), [('1',), ('2',) ,('1', '2'),])
+        self.assertEqual(get_all_combinations(['1', '2', '3']),
+                         [('1',), ('2',), ('3',),
+                                 ('1', '2',), ('1', '3',), ('2', '3',),
+                                 ('1', '2', '3',)])
+
 
 
 if __name__ == '__main__':

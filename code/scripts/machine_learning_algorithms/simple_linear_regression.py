@@ -2,31 +2,22 @@ import math
 
 import pandas as pd
 from matplotlib import pyplot as plt
-
 from scripts.machine_learning_algorithms.ML import *
 import sklearn.linear_model as sk
 from sklearn.metrics import r2_score, mean_squared_error
 from scripts.Support.format_txt import paint as p
 
 
-class LinearRegression(Algorithm, MetricsR2, MetricsRMSE):
+class SLR(Algorithm, MetricsR2, MetricsRMSE):
 
-    def __init__(self, df: pd.DataFrame, factors: list[str], target: list[str]):
-        self.target = target
-        self.factors = factors
-        self.df = df
-
-        # 20 %
-        self.test = df.sample(frac=0.2)
-        # 80 %
-        self.train = df.drop(self.test.index)
-
-        self.moduls = [self.create_model(factor) for factor in factors]
+    def __init__(self, target: list[str],  factors: list[str],  df: pd.DataFrame):
+        super().__init__(target, factors, df)
+        self.models = [self.create_model(factor) for factor in factors]
         self.results = self.get_result()
 
     def get_result(self) -> pd.DataFrame:
         results = self.test[self.target].copy()
-        for mod, factor in zip(self.moduls, self.factors):
+        for mod, factor in zip(self.models, self.factors):
             results[factor] = mod.predict(self.test[factor].to_numpy().reshape(-1, 1))
         return results
 
@@ -58,11 +49,11 @@ class LinearRegression(Algorithm, MetricsR2, MetricsRMSE):
                 print(f'{factor} -- {p(round(value, 3), 'blue')}')
         print()
 
-        for factor, mod in zip(self.factors, self.moduls):
-            print(f'{p(self.target[0], 'green')} = {round(mod.coef_[0][0], 2):-} * {p(factor, 'orange')} '
-                  f'{round(mod.intercept_[0], 2):-}')
+        for factor, mod in zip(self.factors, self.models):
+            print(f'{p(self.target[0], 'green')} = {mod.coef_[0][0]:-0.2f} * {mod.intercept_[0]:-0.2f} '
+                  f'{p(factor, 'orange')}')
 
-        for factor, mod in zip(self.factors, self.moduls):
+        for factor, mod in zip(self.factors, self.models):
             plt.scatter(self.train[factor], self.train[self.target], color='blue', label='Training data')
             plt.scatter(self.test[factor], self.test[self.target], color='green', label='Testing data')
             plt.plot(self.df[factor], mod.predict(self.df[factor].to_numpy().reshape(-1, 1)), color='red', label='Linear regression')
