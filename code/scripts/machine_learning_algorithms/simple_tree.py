@@ -1,12 +1,10 @@
 import math
-
-import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import r2_score, mean_squared_error
 from scripts.machine_learning_algorithms.ML import *
 
 
-class ST(Algorithm, MetricsR2, MetricsRMSE):
+class ST(Algorithm):
     def __init__(self, target, factors, df):
         super().__init__(target, factors, df)
         self.model = self.create_model()
@@ -29,5 +27,3 @@ class ST(Algorithm, MetricsR2, MetricsRMSE):
         print('RMSE', self.get_RMSE())
         print('R2 score', self.get_r2_score())
         print(mean_squared_error(self.train[self.factors]))
-
-

@@ -8,7 +8,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 from scripts.Support.format_txt import paint as p
 
 
-class SLR(Algorithm, MetricsR2, MetricsRMSE):
+class SLR(Algorithm):
 
     def __init__(self, target: list[str],  factors: list[str],  df: pd.DataFrame):
         super().__init__(target, factors, df)
@@ -52,7 +52,7 @@ class SLR(Algorithm, MetricsR2, MetricsRMSE):
         for factor, mod in zip(self.factors, self.models):
             print(f'{p(self.target[0], 'green')} = {mod.coef_[0][0]:-0.2f} * {mod.intercept_[0]:-0.2f} '
                   f'{p(factor, 'orange')}')
-
+        print()
         for factor, mod in zip(self.factors, self.models):
             plt.scatter(self.train[factor], self.train[self.target], color='blue', label='Training data')
             plt.scatter(self.test[factor], self.test[self.target], color='green', label='Testing data')

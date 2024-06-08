@@ -63,7 +63,7 @@ class TestSupp(unittest.TestCase):
     def test_get_all_permutations(self):
         self.assertEqual(get_all_combinations([]), [])
         self.assertEqual(get_all_combinations(['1']), [('1',)])
-        self.assertEqual(get_all_combinations(['1', '2']), [('1',), ('2',) ,('1', '2'),])
+        self.assertEqual(get_all_combinations(['1', '2']), [('1',), ('2',), ('1', '2'),])
         self.assertEqual(get_all_combinations(['1', '2', '3']),
                          [('1',), ('2',), ('3',),
                                  ('1', '2',), ('1', '3',), ('2', '3',),

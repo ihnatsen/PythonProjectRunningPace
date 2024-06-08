@@ -6,7 +6,7 @@ from scripts.machine_learning_algorithms.ML import *
 from scripts.Support.format_txt import paint as p
 
 
-class MLR(Algorithm, MetricsR2, MetricsRMSE):
+class MLR(Algorithm):
 
     def __init__(self, target, factors, df):
         super().__init__(target, factors, df)
@@ -56,5 +56,5 @@ class MLR(Algorithm, MetricsR2, MetricsRMSE):
             for feature, value in zip(values_features, values_mod, ):
                 print(f'{value}*{feature}', end=' ')
             print(free_)
-
+            print()
 
