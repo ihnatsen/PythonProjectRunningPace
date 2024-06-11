@@ -8,8 +8,11 @@ from scripts.Support.format_txt import paint as p
 
 class MLR(Algorithm):
 
-    def __init__(self, target, factors, df):
+    def __init__(self, target, factors, df, ):
         super().__init__(target, factors, df)
+
+    def get_df(self):
+        return self.df
 
     def create_model(self):
         return {factors: LinearRegression().fit(self.train[list(factors)], self.train[self.target])

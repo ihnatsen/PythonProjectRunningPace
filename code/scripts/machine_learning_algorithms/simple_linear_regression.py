@@ -15,6 +15,9 @@ class SLR(Algorithm):
         self.models = [self.create_model(factor) for factor in factors]
         self.results = self.get_result()
 
+    def get_df(self):
+        return self.df
+
     def get_result(self) -> pd.DataFrame:
         results = self.test[self.target].copy()
         for mod, factor in zip(self.models, self.factors):
@@ -50,7 +53,7 @@ class SLR(Algorithm):
         print()
 
         for factor, mod in zip(self.factors, self.models):
-            print(f'{p(self.target[0], 'green')} = {mod.coef_[0][0]:-0.2f} * {mod.intercept_[0]:-0.2f} '
+            print(f'{p(self.target[0], 'green')} = {mod.coef_[0][0]:-0.2f} + {mod.intercept_[0]:-0.2f} '
                   f'{p(factor, 'orange')}')
         print()
         for factor, mod in zip(self.factors, self.models):

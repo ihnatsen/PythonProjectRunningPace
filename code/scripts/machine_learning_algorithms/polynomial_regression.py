@@ -12,6 +12,9 @@ class PR(Algorithm):
         self.models = self.create_model(factors)
         self.results = self.get_result()
 
+    def get_df(self):
+        return self.df
+
     def create_model(self, factor):
         X = pd.DataFrame(index=self.train.index)
         for degree in range(1, self.degree + 1):

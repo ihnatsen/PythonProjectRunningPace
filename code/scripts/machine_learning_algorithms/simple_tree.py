@@ -1,13 +1,19 @@
 import math
-from sklearn.tree import DecisionTreeClassifier
+from sklearn import tree
+
 from sklearn.metrics import r2_score, mean_squared_error
 from scripts.machine_learning_algorithms.ML import *
+import matplotlib.pyplot as plt
 
 
 class ST(Algorithm):
-    def __init__(self, target, factors, df):
+    def __init__(self, target, factors, df, max_depth):
         super().__init__(target, factors, df)
         self.model = self.create_model()
+        self.max_depth = max_depth
+
+    def get_df(self):
+        return self.df
 
     def get_result(self):
         return self.model.predict(self.test[self.factors])
@@ -19,11 +25,16 @@ class ST(Algorithm):
         return math.sqrt(mean_squared_error(self.get_result(), self.test[self.target]))
 
     def create_model(self):
-        tree = DecisionTreeClassifier()
-        tree.fit(self.train[self.factors], self.train[self.target])
-        return tree
+        _tree = tree.DecisionTreeRegressor(max_depth=self.max_depth)
+        _tree.fit(self.train[self.factors], self.train[self.target])
+        return _tree
 
     def print_information(self):
         print('RMSE', self.get_RMSE())
         print('R2 score', self.get_r2_score())
-        print(mean_squared_error(self.train[self.factors]))
+        tree.plot_tree(self.model, feature_names=self.factors,
+               fontsize=5,
+               rounded=True,
+               filled=True,
+               impurity=True)
+        plt.show()

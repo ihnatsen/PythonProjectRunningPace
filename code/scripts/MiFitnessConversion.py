@@ -84,9 +84,21 @@ def filter_three(data: pd.DataFrame) -> pd.DataFrame:
 def filter_four(data: pd.DataFrame) -> pd.DataFrame:
     print(f'The number of records that contain a avg_pace more than {paint(6, 'red')} min/km '
           f'is {paint(len(data)-len(data[data['avg_pace'] < 6.5]), 'red')}')
-    print(data[data['avg_pace'] < 6.5])
+    print(data[data['avg_pace'] > 6.5])
     print()
     return data[data['avg_pace'] <= 6.5]
+
+
+def filter_five(data: pd.DataFrame) -> pd.DataFrame:
+    print(f'The number of records that contain steps less than {paint(1400, 'red')} '
+          f'is {paint(len(data[data['steps'] < 1400]), 'red')}')
+    print(data[data['steps'] < 1400])
+
+    # avg columns which have more 1400 step
+
+    avg = int(data[data['steps'] >= 1400]['steps'].mean())
+    data.loc[data['steps'] < 1400, 'steps'] = avg
+    return data
 
 
 def split_datatime(df: pd.DataFrame) -> pd.DataFrame:
@@ -116,14 +128,12 @@ def main():
 
     # filter avg data
     data = filter_four(data)
-
     # split end and start time to date and hours
     data = split_datatime(data)
+    data = filter_five(data)
 
     # write a ready data to directory dataset
-    # data.to_csv(get_path_to_new_file('dataset', 'training.csv'), index=False)
-    # print(f'The first date is {unix_to_datetime(data['start_time'].min())}')
-    # print(f'The last date is {unix_to_datetime(data['start_time'].max())}')
+    data.to_csv(get_path_to_new_file('dataset', 'training.csv'), index=False)
 
 
 if __name__ == '__main__':
