@@ -1,24 +1,19 @@
 import pandas as pd
-from sklearn.metrics import mean_squared_error, r2_score
-from scripts.machine_learning_algorithms.multiple_linear_regression import *
+
 from scripts.machine_learning_algorithms.ML import *
+from sklearn.linear_model import LinearRegression
 
 
 class PR(Algorithm):
 
     def __init__(self, target, factors, df, degree):
-        super().__init__(target, factors, df)
         self.degree = degree
-        self.models = self.create_model(factors)
-        self.results = self.get_result()
+        super().__init__(target, factors, df)
 
-    def get_df(self):
-        return self.df
-
-    def create_model(self, factor):
+    def create_model(self):
         X = pd.DataFrame(index=self.train.index)
         for degree in range(1, self.degree + 1):
-            X[f'{factor}^^{degree}'] = self.train[factor] ** degree
+            X[f'{self.factors[0]}^^{degree}'] = self.train[self.factors] ** degree
         y = self.train[self.target]
         lr = LinearRegression()
         lr.fit(X, y)
@@ -27,18 +22,11 @@ class PR(Algorithm):
     def get_result(self):
         X = pd.DataFrame(index=self.test.index)
         for degree in range(1, self.degree + 1):
-            X[f'{self.factors}^^{degree}'] = self.test[self.factors] ** degree
-        return self.models.predict(X)
-
-    def get_RMSE(self):
-        return math.sqrt(mean_squared_error(self.get_result(), self.test[self.target]))
-
-    def get_r2_score(self):
-        return r2_score(self.get_result(), self.test[self.target])
+            X[f'{self.factors[0]}^^{degree}'] = self.test[self.factors] ** degree
+        return self.model.predict(X)
 
     def print_information(self):
         print(f'Factor: {self.factors}[{p(self.degree, 'orange')}]:')
-        print(f'{p('RMSE', 'green')} [{round(self.get_RMSE(), 2)}]')
-        print(f'{p('R2 Score', 'green')} [{round(self.get_r2_score(), 2)}]')
+        super().print_information()
         print(f'Model:')
-        print(f'{(self.models.coef_).tolist()[0]} {self.models.intercept_}')
+        print(f'{(self.model.coef_).tolist()[0]} {self.model.intercept_}')

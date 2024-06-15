@@ -4,7 +4,7 @@ from scripts.Support.path import *
 from scripts.Support.data_transformation import *
 from scripts.Support.format_txt import *
 from scripts.Support.combinatorics import *
-
+from scripts.Support.calculate import get_coefficients
 
 class TestSupp(unittest.TestCase):
     def test_get_path_df(self):
@@ -69,6 +69,18 @@ class TestSupp(unittest.TestCase):
                                  ('1', '2',), ('1', '3',), ('2', '3',),
                                  ('1', '2', '3',)])
 
+    def test_get_coefficients(self):
+        point_one = [0.0, 8.0]
+        point_two = [1.0, 10.0]
+
+        self.assertEqual(get_coefficients(point_one, point_two),
+                         (2, 8,)
+                         )
+        point_one = [0.0, 0.0]
+        point_two = [1.0, 1.0]
+        self.assertEqual(get_coefficients(point_one, point_two),
+                         (1, 0,)
+                         )
 
 
 if __name__ == '__main__':

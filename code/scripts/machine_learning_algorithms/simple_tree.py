@@ -8,21 +8,8 @@ import matplotlib.pyplot as plt
 
 class ST(Algorithm):
     def __init__(self, target, factors, df, max_depth):
-        super().__init__(target, factors, df)
-        self.model = self.create_model()
         self.max_depth = max_depth
-
-    def get_df(self):
-        return self.df
-
-    def get_result(self):
-        return self.model.predict(self.test[self.factors])
-
-    def get_r2_score(self):
-        return r2_score(self.get_result(), self.test[self.target])
-
-    def get_RMSE(self):
-        return math.sqrt(mean_squared_error(self.get_result(), self.test[self.target]))
+        super().__init__(target, factors, df)
 
     def create_model(self):
         _tree = tree.DecisionTreeRegressor(max_depth=self.max_depth)

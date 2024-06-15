@@ -121,8 +121,8 @@ def main():
     data = filter_three(data)
 
     # add pd.Series avg_pace to data
-    minutes = data['duration']/60
-    kilometres = data['distance']/1000
+    minutes = data['duration']
+    kilometres = data['distance']
     avg_pace = minutes/kilometres
     data['avg_pace'] = avg_pace.round(2)
 

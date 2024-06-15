@@ -1,37 +1,39 @@
-from __future__ import annotations
+import math
+
+import pandas as pd
 from abc import ABC, abstractmethod
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
-import pandas as pd
+from sklearn.metrics import mean_squared_error, r2_score
+from scripts.Support.format_txt import paint as p
 
 
 class Algorithm(ABC):
 
-    @abstractmethod
     def __init__(self, target, factors, df):
         self.target = target
         self.factors = factors
         self.df = df
-        self.test = self.get_df().sample(frac=0.2, random_state=1)
-        self.train = self.get_df().drop(self.test.index)
+        self.test = self.df.sample(frac=0.2)
+        self.train = self.df.drop(self.test.index)
+        self.model = self.create_model()
 
-    @abstractmethod
     def get_result(self):
-        raise NotImplementedError
+        return self.model.predict(self.test[self.factors])
 
-    @abstractmethod
-    def get_RMSE(self):
-        raise NotImplementedError
-
-    @abstractmethod
     def get_r2_score(self):
-        raise NotImplementedError
+        return f'{r2_score(self.get_result(), self.test[self.target]):0.3f}'
 
-    @abstractmethod
-    def get_df(self) -> pd.DataFrame:
-        raise NotImplementedError
+    def get_RMSE(self):
+        return f'{math.sqrt(mean_squared_error(self.get_result(), self.test[self.target])):0.3}'
 
-    @abstractmethod
     def print_information(self):
+        print(f'{p('RMSE', 'green')}:')
+        print(f'{self.get_RMSE()}')
+        print(f'{p('R2', 'green')}:')
+        print(f'{self.get_r2_score()}')
+
+    @abstractmethod
+    def create_model(self):
         raise NotImplementedError
 
 
