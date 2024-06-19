@@ -2,6 +2,7 @@ from sklearn.svm import SVR as SVR_
 from scripts.machine_learning_algorithms.ML import Algorithm
 from typing import Literal
 
+
 class SVR(Algorithm):
     def __init__(self, target, factors, df,
                  core: Literal['linear', 'pole', 'rbf', 'sigmoid', 'precomputed']):

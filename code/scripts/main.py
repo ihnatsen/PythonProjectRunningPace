@@ -19,65 +19,51 @@ def main():
     ss_data = SScaler.set_scaler_df(bob)
     target, factors = ['calories'], ['steps', 'duration', 'avg_pace', 'distance', 'temp']
 
-    # lrs = [SLR(target, [factor], bob) for factor in factors]
-    # for lr in lrs:
-    #     lr.print_information()
-    #     print()
-    #
-    # mrs = [MLR(target, list(combination), bob) for combination in get_all_combinations(factors)]
-    # for mr in mrs:
-    #     mr.print_information()
-    #     print()
-    #
-    # st = ST(target, factors, bob, 4)
-    # # st.print_information()
-    #
-    # pr_5 = [PR(target, [label], bob, degree)
-    #         for label in factors for degree in range(1, 5)]
-    #
-    # for mod in pr_5:
-    #     mod.print_information()
-    #     print()
-    #
-    # rf = RF(target, factors,  bob)
-    # rf.print_information()
-    #
-    # reduction = ['stp', 'dur', 'pace', 'dist', 'tmp']
-    # models: dict[str, Algorithm] = dict(
-    #     [*zip([f'MLR[{','.join(combination)}]' for combination in get_all_combinations(reduction)],
-    #           [MLR(target, list(combination), bob) for combination in get_all_combinations(factors)])]
-    # )
-    # models.update(dict(
-    #     [*zip([f'LR[{factor}]' for factor in reduction],
-    #           lrs)]
-    # ))
-    #
-    # models.update({'ST': st, 'RF': rf})
-    #
-    #
-    # r2_score = dict(sorted({name: float(model.get_r2_score()) if float(model.get_r2_score()) >= 0 else 0
-    #             for name, model in models.items() if float(model.get_r2_score()) >= 0.5}.items(),
-    #                 key=lambda v: v[1],
-    #                 reverse=False))
-    #
-    # rmse = dict(sorted({name: float(model.get_RMSE()) if float(model.get_RMSE()) >= 0 else 0
-    #                 for name, model in models.items() if float(model.get_RMSE()) <= 100}.items(),
-    #                 key=lambda v: v[1],
-    #                 reverse=True))
-    #
-    # fig, ax = plt.subplots(figsize=(15, 8))
-    # ax.barh(r2_score.keys(), r2_score.values())
-    # plt.title('Top R2 Sore')
-    # plt.xlabel('Value r2 of model.')
-    # plt.ylabel('Name model.')
-    # plt.show()
-    #
-    # fig, ax = plt.subplots(figsize=(15, 8))
-    # plt.title('Top RMSE Sore')
-    # plt.xlabel('Value RMSE of model.')
-    # plt.ylabel('Name model.')
-    # ax.barh(rmse.keys(), rmse.values())
-    # plt.show()
+    lrs = [SLR(target, [factor], bob) for factor in factors]
+    for lr in lrs:
+        lr.print_information()
+        print()
+
+    mrs = [MLR(target, list(combination), bob) for combination in get_all_combinations(factors)]
+    for mr in mrs:
+        mr.print_information()
+        print()
+
+    st = ST(target, factors, bob, 4)
+    st.print_information()
+
+    pr_5 = [PR(target, [label], bob, degree)
+            for label in factors for degree in range(1, 5)]
+
+    for mod in pr_5:
+        mod.print_information()
+        print()
+
+    rf = RF(target, factors,  bob)
+    rf.print_information()
+
+    reduction = ['stp', 'dur', 'pace', 'dist', 'tmp']
+    models: dict[str, Algorithm] = dict(
+        [*zip([f'MLR[{','.join(combination)}]' for combination in get_all_combinations(reduction)],
+              [MLR(target, list(combination), bob) for combination in get_all_combinations(factors)])]
+    )
+    models.update(dict(
+        [*zip([f'LR[{factor}]' for factor in reduction],
+              lrs)]
+    ))
+
+    models.update({'ST': st, 'RF': rf})
+
+
+    r2_score = dict(sorted({name: float(model.get_r2_score()) if float(model.get_r2_score()) >= 0 else 0
+                for name, model in models.items() if float(model.get_r2_score()) >= 0.5}.items(),
+                    key=lambda v: v[1],
+                    reverse=False))
+
+    rmse = dict(sorted({name: float(model.get_RMSE()) if float(model.get_RMSE()) >= 0 else 0
+                    for name, model in models.items() if float(model.get_RMSE()) <= 100}.items(),
+                    key=lambda v: v[1],
+                    reverse=True))
 
 
 if __name__ == '__main__':

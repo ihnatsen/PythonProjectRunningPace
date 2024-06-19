@@ -49,6 +49,5 @@ def main():
     training = join_weather_and_training()
     training.to_csv(get_path_to_new_file('dataset', 'bob.csv'), index=False)
 
-
 if __name__ == '__main__':
     main()

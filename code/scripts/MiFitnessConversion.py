@@ -4,7 +4,7 @@ from Support.format_txt import paint
 from Support.path import *
 
 
-df = pd.read_csv(get_path_df('mi_fitness', 'all_data.csv'))
+df = pd.read_csv(get_path_df('mi_fitness', 'final_all_data.csv'))
 date_format = "%m/%d/%Y, %H:%M:%S"
 
 

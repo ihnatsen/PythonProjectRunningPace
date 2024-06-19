@@ -41,7 +41,7 @@ def filter_one(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main():
-    weather = get_df_weather()
+    weather = pd.read_csv(get_path_df('weather', 'weather.csv'))
     weather = filter_one(weather)
     weather.to_csv(get_path_to_new_file('dataset', 'weather.csv'), index=False)
 
